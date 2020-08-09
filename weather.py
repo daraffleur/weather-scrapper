@@ -23,16 +23,16 @@ for weather in days:
 
     day=weather.find(class_="wr-date").get_text()
     #print(day)
-    desc=weather.find(class_="wr-day__weather-type-description-container").get_text()
+    description=weather.find(class_="wr-day__weather-type-description-container").get_text()
     #print(desc)
     temp=weather.find(class_="wr-day-temperature").get_text()
     #print(temp)
 
 
     print('day', day)
-    print('desc', desc)
+    print('desc', description)
     print('temp', temp)
 
     print('Writing rows')
     # add the information as a row into the csv table
-    f.writerow([day, desc, temp])
+    f.writerow([day, description, temp])
