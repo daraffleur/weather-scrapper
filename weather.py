@@ -28,10 +28,12 @@ f = csv.writer(open(file_name, 'w', newline=''))
 # write a new row as a header
 f.writerow(['Day', 'Description', 'Temperature'])
 
-period_tags = fortheen_day.select(".wr-day__title")
-periods = [pt.get_text() for pt in period_tags]
-temps = [t.get_text() for t in fortheen_day.select(".wr-day__temperature")]
-short_descs = [sd.get_text() for sd in fortheen_day.select(".wr-day__details__weather-type-description")]
+for fortheen_day in doc:
+
+    period_tags = fortheen_day.select(".wr-day__title")
+    periods = [pt.get_text() for pt in period_tags]
+    temps = [t.get_text() for t in fortheen_day.select(".wr-day__temperature")]
+    short_descs = [sd.get_text() for sd in fortheen_day.select(".wr-day__details__weather-type-description")]
 
 print('periods', periods)
 print('temps',temps)
