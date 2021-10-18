@@ -12,8 +12,10 @@ pipeline {
         stage('Git clone') {
             steps {
                 
+                sh 'sudo rm -rf my_yelp_reviews'
                 sh 'git clone https://github.com/KunalNK/my_yelp_reviews.git'
-                sh 'python --version'
+                sh 'cd my_yelp_reviews'
+                sh 'cat yelp_reviews_new.csv'
                 
             }
         }
