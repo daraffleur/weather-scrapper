@@ -1,17 +1,13 @@
 pipeline {
-    agent any
+    agent {
+        dockerfile true
+    }
     stages {
-        stage('git repo & clean') {
+        stage('print message') {
             steps {
-                sh "rm -rf my_weather_scraper"
-                sh "git clone https://github.com/KunalNK/my_weather_scraper.git"
+                echo "Hello Jenkins"
                
             }
         }
-        stage('install') {
-            steps {
-                sh "python weather.py"
-            }
-        }
-    }
+        
 }
