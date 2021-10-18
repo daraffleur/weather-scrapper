@@ -8,5 +8,14 @@ pipeline {
                 
             }
         }
+
+        stage('Git clone') {
+            steps {
+                
+                sh 'git clone https://github.com/KunalNK/my_yelp_reviews.git'
+                sh 'python --version'
+                
+            }
+        }
     }
 }
