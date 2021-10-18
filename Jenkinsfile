@@ -9,12 +9,5 @@ pipeline {
             }
         }
 
-        stage('Test-1') {
-            steps {
-                sh 'python --version'
-                sh 'python weather.py'
-                
-            }
-        }
-    }
+   }
 }
