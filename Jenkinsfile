@@ -9,12 +9,11 @@ pipeline {
             }
         }
 
-        stage('Git clone') {
+        stage('Test') {
             steps {
+                sh 'python --version'
+                sh 'python weather.py'
                 
-                sh 'rm -rf my_weather_scraper'
-                sh 'https://github.com/KunalNK/my_weather_scraper.git'
-                sh 'python app.py'                            
             }
         }
     }
