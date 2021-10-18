@@ -10,7 +10,7 @@ pipeline {
         }
         stage('install') {
             steps {
-                sh "python3 weather.py"
+                sh "python weather.py"
             }
         }
     }
