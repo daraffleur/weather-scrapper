@@ -12,9 +12,9 @@ pipeline {
         stage('Git clone') {
             steps {
                 
-                sh 'rm -rf my_yelp_reviews'
-                sh 'git clone https://github.com/KunalNK/my_yelp_reviews.git'
-                sh 'python yelp.py'                            
+                sh 'rm -rf my_weather_scraper'
+                sh 'https://github.com/KunalNK/my_weather_scraper.git'
+                sh 'python app.py'                            
             }
         }
     }
