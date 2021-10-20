@@ -5,3 +5,4 @@ from .guest import (
     UpdateGuestAPIView,
     DeleteGuestAPIView,
 )
+from .weather import WeatherScrapperView
