@@ -12,16 +12,5 @@ services:
       - 127.0.0.1:${DATABASE_PORT}:5432
     # restart: always
 
-  # web:
-  #   build: .
-  #   container_name: web
-  #   command: bash ./start_server.sh
-  #   volumes:
-  #     - .:/usr/src/app
-  #   ports:
-  #     - 8000:8000
-  #   depends_on:
-  #     - db
-
 volumes:
   db_data:
